@@ -2,10 +2,13 @@
 Plasma Donor Application
 
 # TEAM MEMBERS:
-SAMYUKTHA G U, 
+SAMYUKTHA G U,
 SRIMATHI S, 
 PARVADHAVARTHINI S,  
 KIRUTHIGA C
+
+A.V.C College of Engineering,
+Mayiladuthurai
 
 # Software Required:
 Python, Flask , Docker
