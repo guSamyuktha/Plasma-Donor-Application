@@ -23,3 +23,24 @@ def login():
 @app.route("/register")
 def register():
   return render_template('register.html')
+
+@app.route('/addrec',methods = ['POST', 'GET'])
+def addrec():
+   if request.method == 'POST':
+      try:
+         name = request.form['name']
+         addr = request.form['address']
+
+         
+         with sql.connect("student_database.db") as con:
+            cur = con.cursor()
+            cur.execute("INSERT INTO students (name,addr,city,pin) VALUES (?,?,?,?)",(name,addr,city,pin) )
+            con.commit()
+            msg = "Record successfully added!"
+      except:
+         con.rollback()
+         msg = "error in insert operation"
+      
+      finally:
+         return render_template("list.html",msg = msg)
+         con.close()
