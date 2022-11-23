@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ PAGE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style4.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='sty.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+    
+    <body bgcolor="#0f0c29">
+        
+        <div class="main">
+            <div class="navbar">
+                <div class="menu">
+                    <ul>
+                        <li><a href="/"></a></li>
+                        <li><a href="/base">DASHBOARD</a></li>
+                        <li><a href="aboutme">CONTACT</a></li>
+                        <li><a href="/">LOGOUT</a></li>
+                    </ul>
+                </div>
+                <div class="search">
+                    <input class="srch" type="search" name="" placeholder="Type To text">
+                    <a href="#"> <button class="btn">Search</button></a>
+                </div>
+                
+                
+            </div> 
+        <h1 class="faq-heading">FAQ'S</h1>
+        <section class="faq-container">
+            <div class="faq-one">
+                <!-- faq question -->
+                <h1 class="faq-page">How do I donate plasma?</h1>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>There are more than 900 licensed and IQPP-certified plasma collection centers in the U.S., Canada, and Europe. 
+                        Each company manages its operations differently within government regulatory guidelines. 
+                        Locate a center near you, using our searchable directory. 
+                        Call the center to find out hours of operation and to ask any other questions you may have.</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-two">
+                <!-- faq question -->
+                <h1 class="faq-page">Who can donate?</h1>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>Generally, plasma donors must be 18 years of age and weigh at least 110 pounds (50kg).
+                    All individuals must pass two separate medical examinations, a medical history screening and 
+                    testing for transmissible viruses, before their donated plasma can be used to manufacture plasma 
+                    protein therapies.</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-three">
+                <!-- faq question -->
+<h1 class="faq-page">Is donating plasma safe?</h1>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>Yes. Plasma donation in IQPP certified collection centers is performed in a highly controlled, sterile environment 
+                        by professionally trained medical staff. All plasma collection equipment is sterilized 
+                        and any equipment that comes into contact with you is used only once to eliminate 
+                        the possibility of transmitting viral infections.</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-four">
+                <!-- faq question -->
+<h1 class="faq-page">What type of medical screening and testing is done?</h1>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>You must have a pre-donation physical which includes answering medical history questions, 
+                    tests for viruses such as HIV and Hepatitis and evaluating your protein and hemoglobin levels.</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-five">
+                <!-- faq question -->
+<h1 class="faq-page">How long does it take?</h1>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>Your first donation will take approximately 2 hours. 
+                        Return visits on average take about 90 minutes.</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-six">
+                <!-- faq question -->
+<h1 class="faq-page">What do you do with my plasma?</h1>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>Nearly 500 different types of proteins have been found in human blood plasma.
+                     Approximately 150 of these may be used for diagnosing disease or manufacturing therapies.</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-seven">
+                <!-- faq question -->
+<h1 class="faq-page">How do you get my plasma?</h1>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>Donating plasma is similar to giving blood. A needle is placed into a vein in your arm. 
+                    Plasma is collected through a process call plasmapheresis and is conducted in cycles that may take
+                up to an hour. Whole blood is drawn. The plasma is separated from the red blood cells and other
+                 cellular components. These are returned to your body with sterile saline solution to help the body replace the plasma removed from the whole blood.</p>
+                </div>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-eight">
+                <!-- faq question -->
+<h1 class="faq-page">How much plasma does one donation provide?</h1>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>Each donation yields approximately 625 to 800 milliliters of plasma. Federal regulations allow 
+                        individuals to donate plasma as often as twice in seven days if the donations 
+                    occur  two days apart from each other. </p>
+                </div>
+            </div>
+            <hr class="hr-line">
+            <div class="faq-nine">
+                <!-- faq question -->
+<h1 class="faq-page">Can I donate at more than one plasma donation center?</h1>
+                <!-- faq answer -->
+                <div class="faq-body">
+                    <p>No. To protect our donors' health and minimize the risk of donating more often than permitted, donors 
+                        aren’t allowed to donate at more than one center. All  plasma donation centers 
+                        communicate regularly to verify that donors are complying with this policy. </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        var faq = document.getElementsByClassName("faq-page");
+        var i;
+        for (i = 0; i < faq.length; i++) {
+            faq[i].addEventListener("click", function () {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+            this.classList.toggle("active");
+        /* Toggle between hiding and showing the active panel */
+            var body = this.nextElementSibling;
+            if (body.style.display === "block") {
+                 body.style.display = "none";
+             } else {
+             body.style.display = "block";
+        }
+    });
+}
+
+    </script>
+</body>
+</html>
