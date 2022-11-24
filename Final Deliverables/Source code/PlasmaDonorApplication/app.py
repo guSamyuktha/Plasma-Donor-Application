@@ -20,9 +20,9 @@ def loginn():
 def disply():
   return render_template('disply.html')
 
-@app.route('/dis')
-def dis():
-  return render_template('display.html')
+# @app.route('/dis')
+# def dis():
+#   return render_template('display.html')
 
 
 @app.route('/faq')
@@ -51,13 +51,51 @@ def about():
 
 @app.route('/display')
 def display():
+    # sql="SELECT * FROM plasmadonate"
+    # stmt = ibm_db.prepare(conn, sql)
+    # print(stmt)
+    # ibm_db.execute(stmt)
+    # account = ibm_db.fetch_assoc(stmt)
+    # print(account)
+    # return render_template('disply.html', data=account)
+    d=[]
     sql="SELECT * FROM plasmadonate"
     stmt = ibm_db.prepare(conn, sql)
-    print(stmt)
+    #print(stmt)
     ibm_db.execute(stmt)
     account = ibm_db.fetch_assoc(stmt)
     print(account)
-    return render_template('disply.html', data=account)
+    while account != False:
+       d.append(account)
+       account=ibm_db.fetch_assoc(stmt)
+       print(account)
+    print("HELLOOOOOO")
+    print(d)
+    return render_template('disply.html', d=d)
+
+
+@app.route('/dis')
+def dis():
+    # sql="SELECT * FROM plasmadonate"
+    # stmt = ibm_db.prepare(conn, sql)
+    # print(stmt)
+    # ibm_db.execute(stmt)
+    # account = ibm_db.fetch_assoc(stmt)
+    # print(account)
+    # return render_template('disply.html', data=account)
+    d=[]
+    sql="SELECT * FROM plasmarequest"
+    stmt = ibm_db.prepare(conn, sql)
+    #print(stmt)
+    ibm_db.execute(stmt)
+    account = ibm_db.fetch_assoc(stmt)
+    print(account)
+    while account != False:
+       d.append(account)
+       account=ibm_db.fetch_assoc(stmt)
+       print(account)
+    print(d)
+    return render_template('display.html', d=d)
 
 @app.route('/register',methods = ['POST', 'GET'])
 def register():

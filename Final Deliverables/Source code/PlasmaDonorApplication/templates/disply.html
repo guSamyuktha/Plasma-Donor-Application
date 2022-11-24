@@ -48,10 +48,11 @@ font-size: 20px;
         <div class="navbar">
             <div class="menu">
                 <ul>
-                    <li><a href="/">HOME</a></li>
-                    <li><a href="about">ABOUT</a></li>
-                    <li><a href="reques">REQUEST</a></li>
-                    <li><a href="donor">DONATE</a></li>
+                  <li><a href="/"></a></li>
+                  <li><a href="/base">DASHBOARD</a></li>
+                  <li><a href="aboutme">CONTACT</a></li>
+                  <li><a href="/">LOGOUT</a></li>
+                  <li><a href="faq">FAQ</a></li>
                 </ul>
             </div>
 
@@ -76,17 +77,18 @@ font-size: 20px;
                   <th style="color:#ff1616">STATE</th>
                   <th style="color:#ff1616">AGE</th>
                 </tr>
+                {% for row in d %}
                 <tr>
-                  <td style="color:#ffffff">{{data.NAME}}</td>
-                  <td style="color:#ffffff">{{data.EMAIL}}</td>
-                  <td style="color:#ffffff">{{data.PHONE}}</td>
-                  <td style="color:#ffffff">{{data.BLOODGROUP}}</td>
-                  <td style="color:#ffffff">{{data.ADDRESS}}</td>
-                  <td style="color:#ffffff">{{data.DISTRICT}}</td>
-                  <td style="color:#ffffff">{{data.STATE}}</td>
-                  <td style="color:#ffffff">{{data.AGE}}</td>
+                  <td style="color:#ffffff">{{row["NAME"]}}</td>
+                  <td style="color:#ffffff">{{row["EMAIL"]}}</td>
+                  <td style="color:#ffffff">{{row["PHONE"]}}</td>
+                  <td style="color:#ffffff">{{row["BLOODGROUP"]}}</td>
+                  <td style="color:#ffffff">{{row["ADDRESS"]}}</td>
+                  <td style="color:#ffffff">{{row["DISTRICT"]}}</td>
+                  <td style="color:#ffffff">{{row["STATE"]}}</td>
+                  <td style="color:#ffffff">{{row["AGE"]}}</td>
                 </tr>
-              
+              {% endfor %}
               </table>
         </div>
 

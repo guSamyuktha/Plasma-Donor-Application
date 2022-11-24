@@ -27,64 +27,74 @@
     }
     button:hover{
     background: #6d44b8;
-    }
+    }   
+table, th, td {    
+border: 1px solid rgb(68, 35, 84);  
+margin-left: auto;  
+margin-right: auto;  
+border-collapse: collapse;    
+width: 500px;  
+text-align: center;  
+font-size: 20px;  
+}       
      </style>
     
 
 
 </head>
 <body1>
-     <div class="main">
-          <div class="navbar">
-              <div class="menu">
-                  <ul>
-                      <li><a href="/">HOME</a></li>
-                      <li><a href="about">ABOUT</a></li>
-                      <li><a href="loginn">LOGIN</a></li>
-                      <li><a href="reques">REQUEST</a></li>
-                      <li><a href="donor">DONATE</a></li>
-                  </ul>
-              </div>
-  
-              <div class="search">
-                  <input class="srch" type="search" name="" placeholder="Type To text">
-                  <a href="#"> <button class="btn">Search</button></a>
-              </div>
-  
-          </div> 
 
-          <div>
-               <table>
-                    <thead>
-                    <tr>
-                        <th>NAME</th>
-                        <th>EMAIL</th>
-                        <th>PHONE</th>
-                        <th>BLOOD GROUP</th>
-                        <th>ADDRESS</th>
-                        <th>DISTRICT</th>
-                        <th>STATE</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                        {% for row in output_data %} <-- Using these '{%' and '%}' we can write our python code -->
-                            <tr>
-                                <td>{{row[0]}}</td>
-                                <td>{{row[1]}}</td>
-                                <td>{{row[2]}}</td>
-                                <td>{{row[3]}}</td>
-                                <td>{{row[4]}}</td>
-                                <td>{{row[5]}}</td>
-                                <td>{{row[6]}}</td>
-                            </tr>
-                        {% endfor %}        <-- Because it is flask framework there would be other keywords like 'endfor'   -->
-                    </tbody>
-                </table>
-                
-                
-          </div>
+    <div class="main">
+        <div class="navbar">
+            <div class="menu">
+                <ul>
+                  <li><a href="/"></a></li>
+                  <li><a href="/base">DASHBOARD</a></li>
+                  <li><a href="aboutme">CONTACT</a></li>
+                  <li><a href="/">LOGOUT</a></li>
+                  <li><a href="faq">FAQ</a></li>
 
-          <br>
+                </ul>
+            </div>
+
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder="Type To text">
+                <a href="#"> <button class="btn">Search</button></a>
+            </div>
+
+        </div> 
+
+        <br>
+
+        <div>
+            <table>
+                <tr>
+                  <th style="color:#ff1616">NAME</th>
+                  <th style="color:#ff1616">EMAIL</th>
+                  <th style="color:#ff1616">PHONE</th>
+                  <th style="color:#ff1616">BLOODGROUP</th>          
+                  <th style="color:#ff1616">ADDRESS</th>
+                  <th style="color:#ff1616">DISTRICT</th>
+                  <th style="color:#ff1616">STATE</th>
+                  <th style="color:#ff1616">AGE</th>
+                </tr>
+                {% for row in d %}
+                <tr>
+                  <td style="color:#ffffff">{{row["NAME"]}}</td>
+                  <td style="color:#ffffff">{{row["EMAIL"]}}</td>
+                  <td style="color:#ffffff">{{row["PHONE"]}}</td>
+                  <td style="color:#ffffff">{{row["BLOODGROUP"]}}</td>
+                  <td style="color:#ffffff">{{row["ADDRESS"]}}</td>
+                  <td style="color:#ffffff">{{row["DISTRICT"]}}</td>
+                  <td style="color:#ffffff">{{row["STATE"]}}</td>
+                  <td style="color:#ffffff">{{row["age"]}}</td>
+                </tr>
+              {% endfor %}
+              </table>
+        </div>
+
+    
+        <br>
 
         <footer>
             <div class="main-content">
