@@ -16,6 +16,10 @@ def base():
 def loginn():
   return render_template('login.html')
 
+@app.route('/aboutt')
+def aboutt():
+  return render_template('aboutt.html')
+
 @app.route('/disply')
 def disply():
   return render_template('disply.html')
