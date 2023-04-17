@@ -11,7 +11,7 @@ A.V.C College of Engineering,
 Mayiladuthurai
 
 # Software Required:
-Python, Flask , Docker
+Python, Flask , Docker.
 
 # System Required:
 8GB RAM,Intel Core i3,OS-Windows/Linux/MAC ,Laptop or Desktop
