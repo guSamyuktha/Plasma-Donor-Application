@@ -2,10 +2,10 @@
 Plasma Donor Application
 
 # TEAM MEMBERS:
-1. KIRUTHIGA C,
+1. SAMYUKTHA G U,
 2. SRIMATHI S, 
 3. PARVADHAVARTHINI S,  
-4. SAMYUKTHA G U. 
+4. KIRUTHIGA C.
 
 A.V.C College of Engineering,
 Mayiladuthurai
